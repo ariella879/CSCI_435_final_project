@@ -1,0 +1,9 @@
+CREATE TABLE allergies(
+    patient INT NOT NULL,
+    allergy VARCHAR(50),
+    PRIMARY KEY(patient, allergy),
+    FOREIGN KEY(patient) REFERENCES patients(id) 
+);
+
+INSERT INTO allergies(patient, allergy)
+VALUES (1, 'Aspirin'), (1, 'Tree Nuts'), (1, 'Shellfish'), (2, 'Shellfish'), (3, 'Shellfish'), (6, 'Soy'), (11, 'Wheat'), (21, 'Penicillin'), (16, 'Penicillin'), (17, 'Local Anesthetic'), (10, 'Dilantin'), (8, 'Fish'), (9, 'Egg'), (5, 'Aspirin'), (13, 'Sesame'), (16, 'Sulfonamides'), (18, 'Penicillin'), (7, 'Aspirin'), (14, 'Pollen');
