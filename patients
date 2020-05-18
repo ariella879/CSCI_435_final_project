@@ -1,0 +1,49 @@
+CREATE TABLE patients(
+id INT AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(32) NOT NULL,	
+last_name VARCHAR(32) NOT NULL,
+dob DATE NOT NULL,
+ssn VARCHAR(11) NOT NULL,
+blood_type VARCHAR(16) NOT NULL,
+insurance_provider VARCHAR(64) NOT NULL,
+policy_number VARCHAR(32) NOT NULL,
+primary_phone VARCHAR(13) NOT NULL,
+address1 VARCHAR(100) NOT NULL,	
+address2 VARCHAR(100) NOT NULL,
+state VARCHAR(30) NOT NULL,		
+city VARCHAR(50) NOT NULL,		
+zip_code VARCHAR(5) NOT NULL,
+country  VARCHAR(100) NOT NULL, 
+emergency_contact_name VARCHAR(60),
+emergency_contact_number VARCHAR(13),
+FOREIGN KEY (blood_type) REFERENCES blood_types(type) );
+
+INSERT INTO 
+patients(first_name, last_name, dob, ssn, blood_type, insurance_provider, policy_number,  primary_phone, address1, address2, state, city, zip_code, country, emergency_contact_name, emergency_contact_number) 
+VALUES
+('Nancy', 'Drew', '1990-05-13', '145455678', 'A+', 'Sagicor', 'SA1345678901', '13477984567', '100 Bay Shore Ave', 'Floor 2', 'NY', 'Bay Shore', '13478', 'United States', 'Dillon Shaw', '16467893456'),
+('Bobby', 'Drew', '1986-08-17', '145456543', 'A-', 'Sagicor', 'SA1345678901', '13476549811', '100 Bay Shore Ave', 'Floor 2', 'NY', 'Bay Shore', '13478', 'United States', 'Dillon Shaw', '16467893456'),
+('Sean', 'Drew', '2000-06-25', '145903456', 'AB-', 'Sagicor', 'SA1345678901', '13473908516', '100 Bay Shore Ave', 'Floor 2', 'NY', 'Bay Shore', '13478', 'United States', 'Dillon Shaw', '16467893456'),
+('Phillis', 'Drew', '2005-08-25', '145703257', 'O+', 'Sagicor', 'SA1345678901', '13471234576', '100 Bay Shore Ave', 'Floor 2', 'NY', 'Bay Shore', '13478', 'United States', 'Dillon Shaw', '16467893456'),
+('Tabetha', 'Drew', '2009-08-25', '145098731', 'O+', 'Sagicor', 'SA1345678901', '13475609867', '100 Bay Shore Ave', 'Floor 2', 'NY', 'Bay Shore', '13478', 'United States', 'Dillon Shaw', '16467893456'),
+('Dean', 'Carter', '1993-01-25', '532129876', 'AB+', 'Fideli', 'FI2045678761', '17186254567', '52 Kings Dr', 'Apt 10D', 'NY', 'Brooklyn', '12071', 'United States', 'Doc Carter', '17189132334'),
+('Milly', 'Bobby', '1995-09-20', '567903879', 'O+', 'Fideli', 'FI2045678761', '17186598713', '98 Queens Way', 'Apt F1', 'NY', 'Brooklyn', '12070', 'United States', 'Mama Bobby', '17187618410'),
+('Odetunde', 'Akor', '1965-09-11', '123601968', 'A-', 'Defender', 'DE1345576097', '16318974347', '100 Atlanta Ave', 'Floor 1', 'NY', 'Rosedale', '11435', 'United States', 'Eustace Akor', '15166734526'),
+('Ophelia', 'Akor', '1970-10-18', '123635968', 'A+', 'Defender', 'DE1345576097', '16310574347', '100 Atlanta Ave', 'Floor 1', 'NY', 'Rosedale', '11435', 'United States', 'Eustace Akor', '15166734526'),
+('Abraham', 'Akor', '1995-05-25', '123608104', 'AB+', 'Defender', 'DE1345576097', '16310194347', '100 Atlanta Ave', 'Floor 1', 'NY', 'Rosedale', '11435', 'United States', 'Eustace Akor', '15166734526'),
+('Sarah', 'Akor', '1998-05-13', '123601968', 'O-', 'Defender', 'DE1345576097', '16315670757', '100 Atlanta Ave', 'Floor 1', 'NY', 'Rosedale', '11435', 'United States', 'Eustace Akor', '15166734526'),
+('Tabitha', 'Akor', '1997-04-28', '123601748', 'AB-', 'Defender', 'DE1345576097', '16310213347', '100 Atlanta Ave', 'Floor 1', 'NY', 'Rosedale', '11435', 'United States', 'Eustace Akor', '15166734526'),
+('Ophelia', 'Akor', '2005-02-27', '123910798', 'A+', 'Defender', 'DE1345576097', '16316819077', '100 Atlanta Ave', 'Floor 1', 'NY', 'Rosedale', '11435', 'United States', 'Eustace Akor', '15166734526'),
+('Kevin', 'OConnor', '2000-07-17', '132456543', 'AB-', 'Sagicor', 'SA1341667911', '13477189811', '101 Martin Lawrence Way', 'Floor 2', 'NY', 'Corana', '13678', 'United States', 'Kelvin OConnor', '13451893456'),
+('Andrew', 'Thomas', '1997-04-10', '146492356', 'AB+', 'Allegedly', 'AL1445398905', '16313908516', '100 Allen Ave', 'Floor 3', 'NY', 'Long Island', '11643', 'United States', 'Audrey Thomas', '16317893456'),
+('Moriah', 'McLaughlin', '1987-05-25', '145907258', 'O-', 'Allegedly', 'AL1341976211', '13471234274', '100 Franklin Ave', 'Apt B54', 'NY', 'Grand Circus', '12678', 'United States', 'Sean McLaughlin', '13477893456'),
+('Tabitha', 'Graham', '1978-06-25', '135098731', 'O+', 'Sagicor', 'SA1345390901', '13475608107', '10 Bay Adjacent Ave', 'Floor 1', 'NY', 'Long Island', '12348', 'United States', 'Morris Shaw', '16457893456'), 
+('Tony', 'Morris', '1960-10-11', '123607298', 'B-', 'Allegedly', 'AL1345852097', '16318970627', '13415 Philly Ave', 'Floor 2', 'NY', 'Rosedale', '11435', 'United States', 'Amadana Morris', '16316734526'),
+('Frank', 'Diddis', '1970-10-18', '123635968', 'A+', 'Scorpianis', 'SC1345376597', '16310724334', '1952 Howard Ave', 'Apt 567', 'NY', 'Rosedale', '11435', 'United States', 'Mama Diddis', '15166917193'),
+('Aregano', 'Basil', '1987-04-12', '143605607', 'AB+', 'Scorpianis', 'SC1343076097', '16310194347', '100 Hotlanta Ave', 'Floor 1', 'NY', 'Atlantis', '11831', 'United States', 'Eustace Franklin', '15164829070'),
+('Paprika', 'Salmon', '1980-05-13', '123604568', 'O+', 'Defender', 'DE1295540197', '16315259427', '631 Borealis Ave', 'Apt D45', 'NY', 'Womanhattan', '11000', 'United States', 'Pink Salmon', '15166778923'),
+('Arnell', 'Amon', '1985-05-28', '124603221', 'AB+', 'Defender', 'DE1345293041', '16310905147', '90 Liberty Ave', 'Apt 5D', 'NY', 'Woville', '11390', 'United States', 'Frank Amon', '15166924501'),
+('Martin', 'Larence', '1978-10-27', '123918018', 'A-', 'Defender', 'DE1345542457', '16316909081', '93 Forest Hills Ave', 'Aot 34', 'NY', 'Forest Hills', '78923', 'United States', 'Mark Larence', '15167103746') 
+('Derrick', 'Bennet', '1995-04-04', '123456709', 'A+', 'Alleged', 'AG1345879813', '2123456789', '123 Murky Lane', 'Floor 3', 'NY', 'Jamaikya', '11239', 'United States', 'Duane Bennet', '1235439872'),
+('Ginnah', 'Etah', '1997-10-05', '231574689','A-', 'Cigna', 'CH1234567890', '9174880695', '555 West 55th St', 'Apt 5', 'New York', 'NY', '10019', 'United States', 'My Mother', '3215648697')
+;
