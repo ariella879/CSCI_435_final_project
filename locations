@@ -1,0 +1,19 @@
+CREATE TABLE locations(
+    code VARCHAR(5) NOT NULL PRIMARY KEY,
+    address1 VARCHAR(100) NOT NULL,
+    address2 VARCHAR(100),
+    state VARCHAR(2) NOT NULL,
+    city VARCHAR(30) NOT NULL,
+    zip_code VARCHAR(5) NOT NULL,
+    country VARCHAR(30) NOT NULL,
+    description VARCHAR(150)
+);
+
+INSERT INTO locations (code, address1, state, city, zip_code, country)
+VALUES
+    ('NY001', '10 Rockway Turnpike', 'NY', 'Far Rockaway', '11690', 'United States'),
+    ('NY002', '23 Brookway Drive', 'NY', 'Brooklyn', '11027', 'United States'),
+    ('NY003', '89 Hollaway Road', 'NY', 'New York', '10012', 'United States'),
+    ('NY004', '52 Honey Peak Drive', 'NY', 'Honey Peak', '10101', 'United States'),
+    ('NY005', '100 Rockaway Drive', 'NY', 'Rockaway Beach', '15690', 'United States')
+;
