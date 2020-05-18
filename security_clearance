@@ -1,0 +1,14 @@
+CREATE TABLE security_clearance(
+	clearance INT PRIMARY KEY NOT NULL DEFAULT 1,
+    description VARCHAR(200)
+);
+
+INSERT INTO security_clearance(clearance, description)
+VALUES
+    (1, 'Access to relevant personal information. Permission to edit personal information'),
+    (2, 'Access to patient information. No permission to change patient information'),
+    (3, 'Access to patient information. Permission to change patient information'),
+    (4, 'Access to employee information. Permission to edit employee information.'),
+    (5, 'Access to patient and employee information. Permission to edit employee and patient information.')
+;
+    
