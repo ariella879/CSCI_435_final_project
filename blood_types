@@ -1,0 +1,13 @@
+CREATE TABLE blood_types( type VARCHAR(16) PRIMARY KEY ) ;
+
+INSERT INTO blood_types (type) 
+VALUES
+    ('A+'), 
+    ('A-'), 
+    ('B+'), 
+    ('B-'), 
+    ('AB+'), 
+    ('AB-'), 
+    ('O+'), 
+    ('O-')
+;
